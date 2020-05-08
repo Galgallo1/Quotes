@@ -8,9 +8,13 @@ import { Quotes } from '../quotes'
 })
 export class QuotesComponent implements OnInit {
 
-  quotes:Quotes=[
+  quotes=[
 
-    new Quotes(1,"if you want to cut a tree, sharpen your axe first", "Unkown", "Galgallo", new Date(2020, 6, 6), 0, 0)
+    new Quotes(1,"if you want to cut a tree, sharpen your axe first", "a Lincoln", "Galgallo", new Date(2020, 6, 6), 0, 0),
+    new Quotes(2,"Education is the most powerful weapon to change the world", "Mandela", "TD", new Date(2029, 8, 6), 0, 0),
+    new Quotes(1,"Dont be afraid to be different", "Steve Jobs", "Galgallo", new Date(2020, 4, 10), 0, 0)
+
+
   ]
   constructor() { }
 
