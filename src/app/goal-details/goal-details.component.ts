@@ -10,7 +10,7 @@ import { Quotes } from '../quotes'
 export class GoalDetailsComponent implements OnInit {
 
   @Input() quotes:Quotes;
-  @Output() complete= new EventEmitter<boolean>();
+  @Output() Complete= new EventEmitter<boolean>();
 
   like(quotes){
     quotes.likes +=1
@@ -18,6 +18,10 @@ export class GoalDetailsComponent implements OnInit {
 
   unlike(quotes){
     quotes.unlikes +=1
+  }
+
+  quoteDelete(complete:boolean){
+    this.Complete.emit(complete);
   }
 
 
