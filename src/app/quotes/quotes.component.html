@@ -1,8 +1,13 @@
 <p>quotes works!</p>
-<div>
+<div *ngFor='let quote of quotes; let i=index'>
     <ul>
-        <li *ngFor='let quote of quotes' let i=index> {{ quote.body }}</li>
-        <button (click)=toggleDetails(i) >Details</button>
+        <li> 
+            {{ quote.body }} 
+        </li>
+        <button (click)='toggleDetails(i)' >Details</button>
+
+        
+       
     </ul>
     
 </div>
