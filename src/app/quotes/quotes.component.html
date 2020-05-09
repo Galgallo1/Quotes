@@ -1,17 +1,20 @@
 <h1>Quotes Board</h1>
 
-<div *ngFor='let quote of quotes; let i=index'>
-    <div>
-        <div> 
-            {{ quote.body }} 
-        </div>
-        <button (click)='toggleDetails(i)' >Details</button> 
-        <app-goal-details *ngIf='quote.showPublisher' [quotes]='quote' (Complete)= 'deleteQuote($event,i)'></app-goal-details>
-
-        
-    </div> 
+<div class="container">
+    <div *ngFor='let quote of quotes; let i=index'>
+        <div>
+            <div> 
+                {{ quote.body }} 
+            </div>
+            <button (click)='toggleDetails(i)' >Details</button> 
+            <app-goal-details *ngIf='quote.showPublisher' [quotes]='quote' (Complete)= 'deleteQuote($event,i)'></app-goal-details>
     
+            
+        </div> 
+        
+    </div>
 </div>
+
 
 <div>
     <app-quote-form (addQuotes)="addNewQuote($event)"></app-quote-form>
