@@ -1,10 +1,10 @@
 export class Quotes {
     public showAuthor:boolean;
-    public showDescription:boolean;
+    public showPublisher:boolean;
     constructor(public id: number, public body: string, public author: string, public publisher:string, public date: Date, public likes: number, public unlikes: number){
 
         this.showAuthor=false;
-        this.showDescription=false;
+        this.showPublisher=false;
 
     }
 }

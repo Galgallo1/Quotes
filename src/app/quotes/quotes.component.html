@@ -4,10 +4,10 @@
         <li> 
             {{ quote.body }} 
         </li>
-        <button (click)='toggleDetails(i)' >Details</button>
-
+        <button (click)='toggleDetails(i)' >Details</button> 
+        <app-goal-details *ngIf='quote.showPublisher' [quotes]='quote' (Complete)= 'deleteQuote($event,i)'></app-goal-details>
         
-       
-    </ul>
+    </ul> 
     
 </div>
+

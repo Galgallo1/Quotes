@@ -10,16 +10,27 @@ export class QuotesComponent implements OnInit {
 
   quotes=[
 
-    new Quotes(1,"if you want to cut a tree, sharpen your axe first", "a Lincoln", "Galgallo", new Date(2020, 6, 6), 0, 0),
+    new Quotes(1,"if you want to cut a tree, sharpen your axe first", "A Lincoln", "Galgallo", new Date(2020, 6, 6), 0, 0),
     new Quotes(2,"Education is the most powerful weapon to change the world", "Mandela", "TD", new Date(2029, 8, 6), 0, 0),
-    new Quotes(1,"Dont be afraid to be different", "Steve Jobs", "Galgallo", new Date(2020, 4, 10), 0, 0)
+    new Quotes(3,"Dont be afraid to be different", "Steve Jobs", "Galgallo", new Date(2020, 4, 10), 0, 0)
 
 
   ]
 
   toggleDetails(index){
     this.quotes[index].showAuthor=!this.quotes[index].showAuthor
-    this.quotes[index].showDescription=!this.quotes[index].showDescription
+    this.quotes[index].showPublisher=!this.quotes[index].showPublisher
+  }
+
+  deleteQuote(Complete,index){
+    if(Complete){
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].body}`)
+
+      if (toDelete){
+        this.quotes.splice(index,1);
+      }
+    }
+
   }
   constructor() { }
 
