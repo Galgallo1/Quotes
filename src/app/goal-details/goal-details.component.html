@@ -4,7 +4,7 @@
 <p>Unlikes: {{quotes.unlikes}}</p>
 <p>Posted on {{quotes.date|date}}</p>
 <div >
-  <button  (click)='quoteDelete(true)'>Delete</button>
-  <button  (click)='like(quotes)'>Like</button>
-  <button  (click)='unlike(quotes)'>Unlike</button>
+  <button class="btn btn-danger" (click)='quoteDelete(true)'>Delete</button>
+  <button class="btn btn-info" (click)='like(quotes)'>Like</button>
+  <button  class="btn btn-warning" (click)='unlike(quotes)'>Unlike</button>
 </div>
