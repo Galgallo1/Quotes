@@ -1,15 +1,18 @@
-<h1>Quotes Board</h1>
+<h1 class="jumbotron">Quotes Board</h1>
 
 <div class="container">
     <div class="row">
         <div class="col-md-6">
             <div *ngFor='let quote of quotes; let i=index'>
                 <div>
-                    <div> 
+                    <div class="card-header"> 
                         {{ quote.body }} 
                     </div>
-                    <button (click)='toggleDetails(i)' >Details</button> 
-                    <app-goal-details *ngIf='quote.showPublisher' [quotes]='quote' (Complete)= 'deleteQuote($event,i)'></app-goal-details>
+                    <div class="card-body">
+                        <button class="btn btn-success" (click)='toggleDetails(i)' >Details</button> 
+                        <app-goal-details *ngIf='quote.showPublisher' [quotes]='quote' (Complete)= 'deleteQuote($event,i)'></app-goal-details>
+                    </div>
+                   
             
                     </div>
                 </div>
