@@ -1,13 +1,18 @@
-<p>quotes works!</p>
+<h1>Quotes Board</h1>
+
 <div *ngFor='let quote of quotes; let i=index'>
-    <ul>
-        <li> 
+    <div>
+        <div> 
             {{ quote.body }} 
-        </li>
+        </div>
         <button (click)='toggleDetails(i)' >Details</button> 
         <app-goal-details *ngIf='quote.showPublisher' [quotes]='quote' (Complete)= 'deleteQuote($event,i)'></app-goal-details>
+
         
-    </ul> 
+    </div> 
     
 </div>
 
+<div>
+    <app-quote-form (addQuotes)="addNewQuote($event)"></app-quote-form>
+</div>
