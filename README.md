@@ -5,8 +5,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Author
 **Galgallo Tadicha**
 
-## Screenshot
-<img src="Screenshot from 2020-05-10 07-06-55.png" width="800" length="400">
+##Technologies Used
+1. HTML
+2. CSS
+3. Angular JS
+4.BDD
 
 
 
