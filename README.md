@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. HTML
 2. CSS
 3. Angular JS
-4.BDD
+4. BDD
 
 
 
